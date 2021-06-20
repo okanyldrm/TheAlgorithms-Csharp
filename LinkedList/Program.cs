@@ -10,7 +10,8 @@ namespace LinkedList
         }
     }
 
-
+    #region Create_Node_Class
+    //Node
 
     public class Node
     {
@@ -25,9 +26,14 @@ namespace LinkedList
         public Node Next { get; set; }
         public object Object { get; set; }
 
-       
-    }
 
+    }
+    #endregion
+
+
+    #region Linked_List
+    //Description : Used Node -> Linked List
+    //todo list added
     public class LinkedList
     {
         private int iCount = 1;
@@ -57,12 +63,12 @@ namespace LinkedList
 
         public void ToNext()
         {
-           
+
             if (nCurrent.Next == null)
             {
                 throw new Exception("There is no next node!");
             }
-            else 
+            else
             {
                 nCurrent = nCurrent.Next;
                 iCurrent++;
@@ -71,7 +77,7 @@ namespace LinkedList
 
         public void ToPrevious()
         {
-           
+
             if (nCurrent.Prev == null)
             {
                 throw new Exception("There is no previous node!");
@@ -96,4 +102,6 @@ namespace LinkedList
         }
 
     }
+    #endregion
+
 }
